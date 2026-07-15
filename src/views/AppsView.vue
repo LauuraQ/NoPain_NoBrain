@@ -23,9 +23,10 @@ const apps = ref([
     version: '1.0.0',
     lastUpdate: '12.07.2026',
     developer: 'Громада Д.А, Толстова М.Д',
-    downloadUrl: '/downloads/NoSheet.exe'
+    downloadUrl: 'https://github.com/LauuraQ/NoPain_NoBrain/releases/download/1.0.0/NoSheet.exe'
   },
   {
+
     id: 'meowka',
     name: 'Meowka',
     image: meowkaImg,
@@ -37,7 +38,7 @@ const apps = ref([
     version: '1.2.5',
     lastUpdate: '07.02.2026',
     developer: 'Громада Д.А',
-    downloadUrl: '/downloads/Meowka.exe'
+    downloadUrl: 'https://github.com/LauuraQ/NoPain_NoBrain/releases/download/1.2.5/Meowka.exe'
   }
 ])
 
