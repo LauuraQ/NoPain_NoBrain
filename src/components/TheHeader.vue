@@ -15,17 +15,9 @@ const isLogoHovered = ref(false)
     <div class="header-container">
       
       <!-- Логотип (при клике кидает на главную) -->
-      <RouterLink 
-        to="/" 
-        class="logo-link"
-        @mouseenter="isLogoHovered = true"
-        @mouseleave="isLogoHovered = false"
-      >
-        <img 
-          :src="isLogoHovered ? logoHover : logoNormal" 
-          alt="Logo" 
-          class="logo-img"
-        />
+      <RouterLink to="/" class="logo-link">
+        <img :src="logoNormal" alt="Logo" class="logo-img logo-normal" />
+        <img :src="logoHover" alt="Logo Hover" class="logo-img logo-hover" />
       </RouterLink>
 
       <!-- Навигационное меню -->
@@ -73,6 +65,18 @@ const isLogoHovered = ref(false)
 </template>
 
 <style scoped>
+.logo-hover {
+  display: none; 
+}
+
+.logo-link:hover .logo-normal {
+  display: none; 
+}
+
+.logo-link:hover .logo-hover {
+  display: block; 
+}
+
 .main-header {
   background-color: var(--bg-card);
   border-bottom: 1px solid var(--border-color);
