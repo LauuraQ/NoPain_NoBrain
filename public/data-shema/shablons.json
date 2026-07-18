@@ -1,0 +1,35 @@
+{
+    "home": {
+        "name": "Главная страница",
+        "entities": [
+            "WebSite",
+            "MedicalWebPage",
+            "MedicalOrganization",
+            "Physician",
+            "OfferCatalog",
+            "FAQPage",
+            "MedicalScholarlyArticle",
+            "HowTo"
+        ]
+    },
+    "services": {
+        "name": "Страница услуг",
+        "entities": [
+            "Service",
+            "BreadcrumbList"
+        ]
+    },
+    "contacts": {
+        "name": "Контакты",
+        "entities": [
+            "LocalBusiness",
+            "BreadcrumbList"
+        ]
+    },
+    "faq": {
+        "name": "Частые вопросы",
+        "entities": [
+            "FAQPage"
+        ]
+    }
+}

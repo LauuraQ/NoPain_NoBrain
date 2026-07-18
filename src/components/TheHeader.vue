@@ -24,12 +24,12 @@ const isLogoHovered = ref(false)
       <nav class="header-nav">
         <ul class="nav-list">
           
-          <!-- Дропдаун: Инструменты -->
-          <li class="nav-item dropdown">
-            <span class="nav-link dropdown-trigger">
-              Инструменты <span class="arrow">▼</span>
+         <!-- Дропдаун: Инструменты -->
+          <li class="nav-item header-dropdown">
+            <span class="nav-link header-dropdown-trigger">
+              Инструменты <span class="header-arrow">▼</span>
             </span>
-            <ul class="dropdown-menu">
+            <ul class="header-dropdown-menu">
               <li>
                 <RouterLink to="/generator" class="dropdown-link">Сборщик промптов</RouterLink>
               </li>
@@ -38,6 +38,9 @@ const isLogoHovered = ref(false)
               </li>
               <li>
                 <RouterLink to="/converter" class="dropdown-link">Конвертер картинок</RouterLink>
+              </li>
+              <li>
+                <RouterLink to="/schema-constructor" class="dropdown-link">Конструктор схем</RouterLink>
               </li>
             </ul>
           </li>
@@ -157,10 +160,6 @@ a.nav-link.router-link-active {
   font-weight: 600;
 }
 
-/* Дропдаун */
-.dropdown-trigger {
-  /* Триггеру не нужна подсветка активного роута напрямую */
-}
 
 .arrow {
   font-size: 9px;
@@ -168,41 +167,9 @@ a.nav-link.router-link-active {
   transition: transform 0.2s ease;
 }
 
-/* Хак для сохранения фокуса hover при переходе мышки на меню */
-.dropdown {
-  padding-bottom: 15px;
-  margin-bottom: -15px;
-}
 
-.dropdown-menu {
-  position: absolute;
-  top: calc(100% - 6px);
-  left: 50%;
-  transform: translateX(-50%) translateY(10px);
-  background-color: var(--bg-card);
-  border: 1px solid var(--border-color);
-  border-radius: 8px;
-  padding: 6px 0;
-  min-width: 190px;
-  list-style: none;
-  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5);
-  opacity: 0;
-  visibility: hidden;
-  transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
-  z-index: 101;
-}
 
-/* Анимация при наведении */
-.dropdown:hover .dropdown-menu {
-  opacity: 1;
-  visibility: visible;
-  transform: translateX(-50%) translateY(0);
-}
 
-.dropdown:hover .arrow {
-  transform: rotate(180deg);
-  color: var(--text-main);
-}
 
 .dropdown-link {
   display: block;
@@ -223,5 +190,52 @@ a.nav-link.router-link-active {
   color: #000000 !important;
   background-color: var(--accent) !important;
   font-weight: 600;
+}
+
+/* Дропдаун */
+.header-dropdown-trigger {
+  /* Триггеру не нужна подсветка активного роута напрямую */
+}
+
+.header-arrow {
+  font-size: 9px;
+  color: var(--text-muted);
+  transition: transform 0.2s ease;
+}
+
+/* Хак для сохранения фокуса hover при переходе мышки на меню */
+.header-dropdown {
+  padding-bottom: 15px;
+  margin-bottom: -15px;
+}
+
+.header-dropdown-menu {
+  position: absolute;
+  top: calc(100% - 6px);
+  left: 50%;
+  transform: translateX(-50%) translateY(10px);
+  background-color: var(--bg-card);
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+  padding: 6px 0;
+  min-width: 190px;
+  list-style: none;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5);
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+  z-index: 101;
+}
+
+/* Анимация при наведении */
+.header-dropdown:hover .header-dropdown-menu {
+  opacity: 1;
+  visibility: visible;
+  transform: translateX(-50%) translateY(0);
+}
+
+.header-dropdown:hover .header-arrow {
+  transform: rotate(180deg);
+  color: var(--text-main);
 }
 </style>

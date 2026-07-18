@@ -5,6 +5,7 @@ import SourcesView from '../views/SourcesView.vue'
 import ConverterView from '../views/ConverterView.vue'
 import AppsView from '../views/AppsView.vue'
 import ContactsView from '../views/ContactsView.vue'
+import JsonSchemaConstructor from '../views/JsonSchemaConstructor.vue'
 
 const router = createRouter({
     history: createWebHistory(import.meta.env.BASE_URL),
@@ -38,7 +39,16 @@ const router = createRouter({
             path: '/contacts',
             name: 'contacts',
             component: ContactsView
+        },
+        {
+            path: '/schema-constructor',
+            name: 'SchemaConstructor',
+            component: JsonSchemaConstructor,
+            meta: {
+                title: 'Конструктор Schema'
+            }
         }
+
 
     ]
 })
