@@ -1,0 +1,186 @@
+{
+    "NewEmpty": {
+        "": ""
+    },
+    "WebSite": {
+        "name": "Название клиники",
+        "@id": "https://clinic-domain.ru/#website",
+        "url": "https://clinic-domain.ru/",
+        "publisher": {
+            "@id": "https://clinic-domain.ru/#organization"
+        }
+    },
+    "MedicalWebPage": {
+        "name": "Анонимная наркологическая клиника в [Городе]. Круглосуточный выезд.",
+        "@id": "https://clinic-domain.ru/#webpage",
+        "url": "https://clinic-domain.ru/",
+        "reviewedBy": {
+            "@id": "https://clinic-domain.ru/vrachi/glavny-vrach/#physician-glavny-vrach"
+        },
+        "mainEntity": {
+            "@id": "https://clinic-domain.ru/#organization"
+        }
+    },
+    "MedicalOrganization": {
+        "name": "Наркологическая клиника [Название вашей клиники]",
+        "@id": "https://clinic-domain.ru/#organization",
+        "url": "https://clinic-domain.ru/",
+        "address": "г. [Город], ул. [Улица], д. [Номер]",
+        "telephone": "+7 (XXX) XXX-XX-XX",
+        "image": "https://clinic-domain.ru/assets/img/logo.svg",
+        "hasCredential": {
+            "@type": "EducationalOccupationalCredential",
+            "description": "Лицензия на осуществление медицинской деятельности № ЛО-XX-XX-XXXXXX"
+        },
+        "employee": [
+            {
+                "@id": "https://clinic-domain.ru/vrachi/scitceva-galina-antonovna/#physician-scitceva-galina-antonovna"
+            },
+            {
+                "@id": "https://clinic-domain.ru/vrachi/glavnaya-anastasiya-sergeevna/#physician-glavnaya-anastasiya-sergeevna"
+            },
+            {
+                "@id": "https://clinic-domain.ru/vrachi/alumniOf"
+            }
+        ],
+        "aggregateRating": {
+            "@id": "https://clinic-domain.ru/#aggregate-rating",
+            "ratingValue": "4.9",
+            "bestRating": "5",
+            "worstRating": "1",
+            "reviewCount": "142"
+        },
+        "review": {
+            "@id": "https://clinic-domain.ru/#review-andrey-29-let",
+            "author": {
+                "@type": "Person",
+                "name": "Андрей А.А."
+            },
+            "reviewBody": "Обращались для вывода отчима из запоя. Доктор приехал за 30 минут, поставил капельницу, всё объяснил. Отношение очень уважительное, без осуждения. Огромное спасибо за человечность!",
+            "reviewRating": {
+                "@type": "Rating",
+                "ratingValue": "4",
+                "bestRating": 5,
+                "worstRating": 1
+            },
+            "datePublished": "2026-03-12"
+        }
+    },
+    "Physician": {
+        "@id": "https://clinic-domain.ru/vrachi/ivanova-anastasiya-sergeevna/#physician-ivanova-anastasiya-sergeevna",
+        "name": "Иванова Анастасия Сергеевна",
+        "jobTitle": "Главный врач, нарколог-психиатр",
+        "url": "https://clinic-domain.ru/vrachi/ivanova-anastasiya-sergeevna/",
+        "worksFor": {
+            "@id": "https://clinic-domain.ru/#organization"
+        },
+        "alumniOf": [
+            {
+                "@type": "CollegeOrUniversity",
+                "name": "Диплом Новосибирского государственного медицинского университета"
+            },
+            {
+                "@type": "CollegeOrUniversity",
+                "name": "Диплом Новосибирского государственного медицинского университета"
+            },
+            {
+                "@type": "CollegeOrUniversity",
+                "name": "Диплом Новосибирского государственного медицинского университета"
+            }
+        ],
+        "knowsAbout": [
+            {
+                "@id": "https://clinic-domain.ru/#medical-condition-alkogolizm"
+            },
+            {
+                "@id": "https://clinic-domain.ru/#medical-condition-narkomaniya"
+            }
+        ]
+    },
+    "OfferCatalog": {
+        "@id": "https://clinic-domain.ru/#offer-catalog",
+        "name": "Прайс-лист на услуги наркологии",
+        "itemListElement": [
+            {
+                "@type": "Offer",
+                "@id": "https://clinic-domain.ru/#offer-kodirovanie-esperal",
+                "name": "Кодирование (Эспераль)",
+                "price": 8500,
+                "priceCurrency": "RUB",
+                "description": "Имплантация под кожу, до 12 месяцев"
+            }
+        ]
+    },
+    "FAQPage": {
+        "@id": "https://clinic-domain.ru/#faq",
+        "mainEntity": [
+            {
+                "@type": "Question",
+                "name": "Вы ставите на учет в наркологический диспансер?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Мы используем только сертифицированные препараты последнего поколения от ведущих мировых производителей. Все лекарства подбираются индивидуально с учетом состояния пациента, противопоказаний и аллергических реакций. Мы используем только сертифицированные препараты последнего поколения от ведущих мировых производителей. Все лекарства подбираются индивидуально с учетом состояния пациента, противопоказаний и аллергических реакций. Мы используем только сертифицированные препараты последнего поколения от ведущих мировых производителей. Все лекарства подбираются индивидуально с учетом состояния пациента, противопоказаний и аллергических реакций.",
+                    "author": {
+                        "@id": "https://clinic-domain.ru/#physician-vtoraya-anastasiya-sergeevna"
+                    }
+                }
+            }
+        ]
+    },
+    "MedicalScholarlyArticle": {
+        "@id": "https://clinic-domain.ru/#medical-scholarly-article",
+        "headline": "Квалифицированная наркологическая помощь: методы лечения зависимостей",
+        "description": "Научно доказанные методы детоксикации и реабилитации при алкогольной и наркотической зависимости.",
+        "url": "https://clinic-domain.ru/",
+        "image": "https://clinic-domain.ru/assets/img/sections/doctor.png",
+        "datePublished": "2026-01-15",
+        "dateModified": "2026-07-10",
+        "author": {
+            "@id": "https://clinic-domain.ru/vrachi/ivanova-anastasiya-sergeevna/#physician-ivanova-anastasiya-sergeevna"
+        },
+        "publisher": {
+            "@id": "https://clinic-domain.ru/#organization"
+        }
+    },
+    "HowTo": {
+        "@id": "https://clinic-domain.ru/#how-to",
+        "name": "Что делать при тяжелом похмелье или запое до приезда врача?",
+        "description": "Инструкция для родственников: как облегчить состояние близкого человека в экстренной ситуации.",
+        "step": [
+            {
+                "@type": "HowToStep",
+                "name": "Обеспечить доступ кислорода",
+                "text": "Откройте форточку или окно. Уложите человека на бок, чтобы исключить западание языка или асфиксию при рвоте."
+            },
+            {
+                "@type": "HowToStep",
+                "name": "Обильное питье",
+                "text": "Давайте чистую негазированную воду, минералку без газа или несладкий чай небольшими глотками."
+            },
+            {
+                "@type": "HowToStep",
+                "name": "Обильное питье",
+                "text": "Давайте чистую негазированную воду, минералку без газа или несладкий чай небольшими глотками."
+            },
+            {
+                "@type": "HowToStep",
+                "name": "Обильное питье",
+                "text": "Давайте чистую негазированную воду, минералку без газа или несладкий чай небольшими глотками."
+            }
+        ]
+    },
+    "Service": {
+        "@id": "https://clinic-domain.ru/service/lechenie-alkogolizma/#service-lechenie-alkogolizma",
+        "name": "Лечение алкоголизма",
+        "description": "Описание родительского раздела",
+        "url": "https://clinic-domain.ru/service/lechenie-alkogolizma/",
+        "image": "https://clinic-domain.ru/assets/img/icons/first-aid.svg",
+        "serviceType": "Лечение алкоголизма",
+        "provider": {
+            "@id": "https://clinic-domain.ru/#organization"
+        },
+        "recognizingAuthority": {
+            "@id": "https://clinic-domain.ru/#organization"
+        }
+    }
+}
